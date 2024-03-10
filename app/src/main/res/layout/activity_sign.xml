@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Deliver Favourite Food"
+        android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -43,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Sign Up Here"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/textView14"
@@ -114,6 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Up With"
+        android:textColor="@color/text_color"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="@+id/textView16"
@@ -168,6 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already Hava an Account?"
+        android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="@+id/button6"
         app:layout_constraintStart_toStartOf="@+id/button6"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
