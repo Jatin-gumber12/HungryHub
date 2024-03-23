@@ -14,4 +14,6 @@
     <string name="history">History</string>
     <string name="profile">Profile</string>
     <string name="histo">History</string>
+    <string name="view_menu">View Menu</string>
+    <string name="popular">Popular</string>
 </resources>
