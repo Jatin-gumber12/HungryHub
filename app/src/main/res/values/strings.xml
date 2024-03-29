@@ -17,4 +17,5 @@
     <string name="view_menu">View Menu</string>
     <string name="popular">Popular</string>
     <string name="_500">₹500</string>
+    <string name="food_name">Food Name</string>
 </resources>
