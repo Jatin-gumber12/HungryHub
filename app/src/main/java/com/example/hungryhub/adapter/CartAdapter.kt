@@ -55,6 +55,7 @@ class CartAdapter(private val CartItems : MutableList<String>,private val CartIt
                 binding.cartItemQuantity.text = itemQuantities[position].toString()
             }
 
+
         }
         private fun increaseQuantity(position: Int){
             if (itemQuantities[position]<20){
