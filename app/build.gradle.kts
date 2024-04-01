@@ -52,4 +52,5 @@ dependencies {
 
     //Image Slider Library
     implementation("com.github.denzcoskun:ImageSlideshow:0.1.2")
+    implementation("com.razorpay:checkout:1.6.33")
 }
