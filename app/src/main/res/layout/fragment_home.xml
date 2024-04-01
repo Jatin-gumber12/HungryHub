@@ -38,7 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/ViewAll" />
 
     <TextView
         android:id="@+id/textView20"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/ViewAll"
         android:layout_width="80dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
