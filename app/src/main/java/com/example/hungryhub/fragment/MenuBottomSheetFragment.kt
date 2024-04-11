@@ -30,7 +30,7 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
         }
 
         val menuFoodName = listOf("Burger","Sandwich","Momo","Item","Sandwich","Momo")
-        val menuItemPrice = listOf("₹60","₹80","₹100","90","₹80","₹50")
+        val menuItemPrice = listOf("₹60","₹80","₹100","₹90","₹80","₹50")
         val menuImage = listOf(
             R.drawable.menu2,
             R.drawable.menu1,

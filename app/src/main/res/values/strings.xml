@@ -19,4 +19,6 @@
     <string name="_500">₹500</string>
     <string name="food_name">Food Name</string>
     <string name="_1">1</string>
+    <string name="buy_again">Buy Again</string>
+    <string name="food_price">Food Price</string>
 </resources>
