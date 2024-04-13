@@ -21,4 +21,8 @@
     <string name="_1">1</string>
     <string name="buy_again">Buy Again</string>
     <string name="food_price">Food Price</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="save_information">Save Information</string>
 </resources>
