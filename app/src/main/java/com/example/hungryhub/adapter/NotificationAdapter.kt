@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hungryhub.databinding.NotificationItemBinding
 
-class NotificationAdapter(private var notification : ArrayList<String>, private var notificationImage : ArrayList<Int>): RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
+class NotificationAdapter(private var notifications : ArrayList<String>, private var notificationImage : ArrayList<Int>): RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationAdapter.NotificationViewHolder {
         val binding = NotificationItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
