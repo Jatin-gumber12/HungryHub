@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HungryHub"
         tools:targetApi="31">
         <activity
+            android:name=".PayOutActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChooseLocationActivity"
             android:exported="false" />
         <activity
@@ -26,10 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -39,8 +39,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
     </application>
 
