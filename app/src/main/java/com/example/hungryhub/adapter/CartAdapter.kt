@@ -8,7 +8,7 @@ import com.example.hungryhub.databinding.CartItemBinding
 class CartAdapter(private val CartItems : MutableList<String>,private val CartItemPrice : MutableList<String>,private var cartImage : MutableList<Int>) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
 
-    private val itemQuantities = IntArray(CartItems.size){1}
+    private val itemQuantities = MutableList(CartItems.size){1}
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         val binding = CartItemBinding.inflate(LayoutInflater.from(parent.context),parent,false )
         return CartViewHolder(binding)
@@ -54,7 +54,9 @@ class CartAdapter(private val CartItems : MutableList<String>,private val CartIt
                 itemQuantities[position]--
                 binding.cartItemQuantity.text = itemQuantities[position].toString()
             }
-
+            if(itemQuantities[position] == 0){
+                deleteItem(position)
+            }
 
         }
         private fun increaseQuantity(position: Int){
@@ -67,9 +69,11 @@ class CartAdapter(private val CartItems : MutableList<String>,private val CartIt
             CartItems.removeAt(position)
             cartImage.removeAt(position)
             CartItemPrice.removeAt(position)
+            itemQuantities.removeAt(position) // Remove the corresponding quantity
             notifyItemRemoved(position)
-            notifyItemRangeChanged(position,CartItems.size)
+            notifyItemRangeChanged(position, CartItems.size)
         }
+
 
 
     }
