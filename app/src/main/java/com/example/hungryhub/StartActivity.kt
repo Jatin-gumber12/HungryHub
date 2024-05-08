@@ -19,6 +19,7 @@ class StartActivity : AppCompatActivity() {
         binding.nextButton.setOnClickListener {
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
