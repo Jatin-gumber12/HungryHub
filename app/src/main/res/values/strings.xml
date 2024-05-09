@@ -25,4 +25,5 @@
     <string name="name">Name</string>
     <string name="phone">Phone</string>
     <string name="save_information">Save Information</string>
+    <string name="default_web_client_id">663453799620-u8vhlh47pesch85bdi6al2psl49n05sg.apps.googleusercontent.com</string>
 </resources>
