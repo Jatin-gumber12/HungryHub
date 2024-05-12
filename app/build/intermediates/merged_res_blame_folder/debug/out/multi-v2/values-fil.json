@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.hungryhub.app-mergeDebugResources-58:/values-fil/values-fil.xml",
+            "outputFile": "com.example.hungryhub.app-mergeDebugResources-3:/values-fil/values-fil.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\aman nishad\\.gradle\\caches\\transforms-3\\2b3a7885ce00b4ab222bebecc08d706c\\transformed\\play-services-wallet-18.1.3\\res\\values-fil\\values.xml",
+                    "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\caches\\transforms-3\\2b3a7885ce00b4ab222bebecc08d706c\\transformed\\play-services-wallet-18.1.3\\res\\values-fil\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
