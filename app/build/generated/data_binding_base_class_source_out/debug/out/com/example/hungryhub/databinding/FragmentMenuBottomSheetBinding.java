@@ -21,15 +21,15 @@ public final class FragmentMenuBottomSheetBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageButton backButton;
+  public final ImageButton buttonBack;
 
   @NonNull
   public final RecyclerView menuRecyclerView;
 
   private FragmentMenuBottomSheetBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageButton backButton, @NonNull RecyclerView menuRecyclerView) {
+      @NonNull ImageButton buttonBack, @NonNull RecyclerView menuRecyclerView) {
     this.rootView = rootView;
-    this.backButton = backButton;
+    this.buttonBack = buttonBack;
     this.menuRecyclerView = menuRecyclerView;
   }
 
@@ -60,9 +60,9 @@ public final class FragmentMenuBottomSheetBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.backButton;
-      ImageButton backButton = ViewBindings.findChildViewById(rootView, id);
-      if (backButton == null) {
+      id = R.id.buttonBack;
+      ImageButton buttonBack = ViewBindings.findChildViewById(rootView, id);
+      if (buttonBack == null) {
         break missingId;
       }
 
@@ -72,7 +72,7 @@ public final class FragmentMenuBottomSheetBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMenuBottomSheetBinding((LinearLayout) rootView, backButton,
+      return new FragmentMenuBottomSheetBinding((LinearLayout) rootView, buttonBack,
           menuRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);

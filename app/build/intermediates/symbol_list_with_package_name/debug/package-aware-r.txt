@@ -3327,11 +3327,8 @@ id CartFoodName
 id CartImage
 id CartRecyclerView
 id Cartfoodprice
-id DescriptionTextView
-id DetailFoodImage
 id FUNCTION
 id FoodNamePopular
-id IngredientsTextView
 id META
 id MenuAddToCart
 id MenuFoodName
@@ -3405,8 +3402,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addToCart
 id addToCartPopular
-id addtocartbtn
 id adjust_height
 id adjust_width
 id againButton
@@ -3455,6 +3452,7 @@ id btnFB
 id btnGoogle
 id button7
 id button8
+id buttonBack
 id buttonPanel
 id buyAgainRecycler
 id buyButton
@@ -3467,7 +3465,6 @@ id cancel_button
 id cardView
 id cardView2
 id cardView3
-id cardView4
 id carryVelocity
 id cartFragment
 id cartItemQuantity
@@ -3522,7 +3519,10 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailDescription
+id detailFoodImage
 id detailFoodName
+id detailIngredients
 id dialog_button
 id dimensions
 id direct
@@ -3621,7 +3621,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageButton
 id imageView
 id imageView2
 id imageView3
@@ -3924,7 +3923,6 @@ id textView26
 id textView27
 id textView3
 id textView30
-id textView32
 id textView4
 id textView5
 id textView6
@@ -4101,7 +4099,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_choose_location
-layout activity_details
+layout activity_details_activtity
 layout activity_login
 layout activity_main
 layout activity_pay_out
@@ -4133,9 +4131,7 @@ layout fragment_cart
 layout fragment_congrats_bottom_sheet
 layout fragment_history
 layout fragment_home
-layout fragment_m_menu_bottom_sheet
 layout fragment_menu_bottom_sheet
-layout fragment_menu_bottom_sheet2
 layout fragment_notification_bottom
 layout fragment_profile
 layout fragment_search

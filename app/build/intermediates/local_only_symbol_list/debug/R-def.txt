@@ -69,10 +69,7 @@ id CartFoodName
 id CartImage
 id CartRecyclerView
 id Cartfoodprice
-id DescriptionTextView
-id DetailFoodImage
 id FoodNamePopular
-id IngredientsTextView
 id MenuAddToCart
 id MenuFoodName
 id MenuImage
@@ -80,8 +77,8 @@ id MenuPrice
 id PopularRecycleView
 id PricePopular
 id ViewAll
+id addToCart
 id addToCartPopular
-id addtocartbtn
 id againButton
 id alreadybutton
 id backButton
@@ -90,16 +87,19 @@ id btnFB
 id btnGoogle
 id button7
 id button8
+id buttonBack
 id buyAgainRecycler
 id cardView
 id cardView2
 id cardView3
-id cardView4
 id cartFragment
 id cartItemQuantity
 id createAccountButton
 id deletebutton
+id detailDescription
+id detailFoodImage
 id detailFoodName
+id detailIngredients
 id dontbutton
 id editText
 id editText2
@@ -115,7 +115,6 @@ id fragmentContainerView
 id goHome
 id historyFragment
 id homeFragment
-id imageButton
 id imageView
 id imageView2
 id imageView3
@@ -162,7 +161,6 @@ id textView26
 id textView27
 id textView3
 id textView30
-id textView32
 id textView4
 id textView5
 id textView6
@@ -170,7 +168,7 @@ id textView7
 id textView8
 id textView9
 layout activity_choose_location
-layout activity_details
+layout activity_details_activtity
 layout activity_login
 layout activity_main
 layout activity_pay_out
@@ -184,9 +182,7 @@ layout fragment_cart
 layout fragment_congrats_bottom_sheet
 layout fragment_history
 layout fragment_home
-layout fragment_m_menu_bottom_sheet
 layout fragment_menu_bottom_sheet
-layout fragment_menu_bottom_sheet2
 layout fragment_notification_bottom
 layout fragment_profile
 layout fragment_search

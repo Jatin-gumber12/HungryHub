@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.hungryhub.MenuBottomSheetFragment
 import com.example.hungryhub.R
 import com.example.hungryhub.adapter.PopularAdapter
 import com.example.hungryhub.databinding.FragmentHomeBinding
