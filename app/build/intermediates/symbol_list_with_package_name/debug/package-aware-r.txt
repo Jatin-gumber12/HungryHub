@@ -3166,6 +3166,7 @@ drawable design_snackbar_background
 drawable edittextshape
 drawable eye
 drawable facebook_3_1
+drawable gohomeshape
 drawable google_icon_2
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -3326,8 +3327,11 @@ id CartFoodName
 id CartImage
 id CartRecyclerView
 id Cartfoodprice
+id DescriptionTextView
+id DetailFoodImage
 id FUNCTION
 id FoodNamePopular
+id IngredientsTextView
 id META
 id MenuAddToCart
 id MenuFoodName
@@ -3402,6 +3406,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addToCartPopular
+id addtocartbtn
 id adjust_height
 id adjust_width
 id againButton
@@ -3448,7 +3453,6 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnFB
 id btnGoogle
-id button3
 id button7
 id button8
 id buttonPanel
@@ -3463,6 +3467,7 @@ id cancel_button
 id cardView
 id cardView2
 id cardView3
+id cardView4
 id carryVelocity
 id cartFragment
 id cartItemQuantity
@@ -3517,6 +3522,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailFoodName
 id dialog_button
 id dimensions
 id direct
@@ -3584,6 +3590,7 @@ id fullscreen_header
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
+id goHome
 id gone
 id googleMaterial2
 id google_wallet_classic
@@ -3614,11 +3621,13 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
 id imageView
 id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageView7
 id image_slider
 id image_view
 id immediateStop
@@ -3779,6 +3788,7 @@ id plusbutton
 id position
 id postLayout
 id pressed
+id proceedbutton
 id production
 id profileFragment
 id progressBar
@@ -3913,6 +3923,8 @@ id textView25
 id textView26
 id textView27
 id textView3
+id textView30
+id textView32
 id textView4
 id textView5
 id textView6
@@ -4089,6 +4101,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_choose_location
+layout activity_details
 layout activity_login
 layout activity_main
 layout activity_pay_out
@@ -4115,10 +4128,14 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_blank
 layout fragment_cart
+layout fragment_congrats_bottom_sheet
 layout fragment_history
 layout fragment_home
+layout fragment_m_menu_bottom_sheet
 layout fragment_menu_bottom_sheet
+layout fragment_menu_bottom_sheet2
 layout fragment_notification_bottom
 layout fragment_profile
 layout fragment_search

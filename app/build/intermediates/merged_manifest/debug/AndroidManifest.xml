@@ -74,6 +74,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.HungryHub" >
         <activity
+            android:name="com.example.hungryhub.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.hungryhub.CongratsBottomSheet"
+            android:exported="false" />
+        <activity
             android:name="com.example.hungryhub.PayOutActivity"
             android:exported="false" />
         <activity
@@ -100,8 +106,7 @@
         <activity
             android:name="com.example.hungryhub.MainActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"

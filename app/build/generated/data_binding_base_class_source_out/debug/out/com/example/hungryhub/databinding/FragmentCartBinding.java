@@ -25,17 +25,17 @@ public final class FragmentCartBinding implements ViewBinding {
   public final RecyclerView CartRecyclerView;
 
   @NonNull
-  public final AppCompatButton button3;
+  public final AppCompatButton proceedbutton;
 
   @NonNull
   public final TextView textView22;
 
   private FragmentCartBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView CartRecyclerView, @NonNull AppCompatButton button3,
+      @NonNull RecyclerView CartRecyclerView, @NonNull AppCompatButton proceedbutton,
       @NonNull TextView textView22) {
     this.rootView = rootView;
     this.CartRecyclerView = CartRecyclerView;
-    this.button3 = button3;
+    this.proceedbutton = proceedbutton;
     this.textView22 = textView22;
   }
 
@@ -72,9 +72,9 @@ public final class FragmentCartBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button3;
-      AppCompatButton button3 = ViewBindings.findChildViewById(rootView, id);
-      if (button3 == null) {
+      id = R.id.proceedbutton;
+      AppCompatButton proceedbutton = ViewBindings.findChildViewById(rootView, id);
+      if (proceedbutton == null) {
         break missingId;
       }
 
@@ -84,7 +84,7 @@ public final class FragmentCartBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCartBinding((ConstraintLayout) rootView, CartRecyclerView, button3,
+      return new FragmentCartBinding((ConstraintLayout) rootView, CartRecyclerView, proceedbutton,
           textView22);
     }
     String missingId = rootView.getResources().getResourceName(id);
