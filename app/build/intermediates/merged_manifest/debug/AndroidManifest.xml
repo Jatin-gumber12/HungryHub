@@ -77,9 +77,6 @@
             android:name="com.example.hungryhub.RecentOrderHistory"
             android:exported="false" />
         <activity
-            android:name="com.example.hungryhub.DetailsActivtity"
-            android:exported="false" />
-        <activity
             android:name="com.example.hungryhub.DetailsActivity"
             android:exported="false" />
         <activity

@@ -4,10 +4,10 @@ package com.example.hungryhub.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -28,19 +28,19 @@ public final class FragmentSearchBinding implements ViewBinding {
   public final SearchView searchView;
 
   @NonNull
-  public final TextView textView21;
+  public final TextView textView22;
 
   @NonNull
-  public final TextView textView23;
+  public final TextView textView24;
 
   private FragmentSearchBinding(@NonNull ConstraintLayout rootView,
       @NonNull RecyclerView menuRecyclerView, @NonNull SearchView searchView,
-      @NonNull TextView textView21, @NonNull TextView textView23) {
+      @NonNull TextView textView22, @NonNull TextView textView24) {
     this.rootView = rootView;
     this.menuRecyclerView = menuRecyclerView;
     this.searchView = searchView;
-    this.textView21 = textView21;
-    this.textView23 = textView23;
+    this.textView22 = textView22;
+    this.textView24 = textView24;
   }
 
   @Override
@@ -82,20 +82,20 @@ public final class FragmentSearchBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView21;
-      TextView textView21 = ViewBindings.findChildViewById(rootView, id);
-      if (textView21 == null) {
+      id = R.id.textView22;
+      TextView textView22 = ViewBindings.findChildViewById(rootView, id);
+      if (textView22 == null) {
         break missingId;
       }
 
-      id = R.id.textView23;
-      TextView textView23 = ViewBindings.findChildViewById(rootView, id);
-      if (textView23 == null) {
+      id = R.id.textView24;
+      TextView textView24 = ViewBindings.findChildViewById(rootView, id);
+      if (textView24 == null) {
         break missingId;
       }
 
       return new FragmentSearchBinding((ConstraintLayout) rootView, menuRecyclerView, searchView,
-          textView21, textView23);
+          textView22, textView24);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

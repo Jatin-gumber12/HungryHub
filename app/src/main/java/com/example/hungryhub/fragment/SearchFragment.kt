@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hungryhub.adapter.MenuAdapter
 import com.example.hungryhub.databinding.FragmentSearchBinding
@@ -82,7 +82,6 @@ class SearchFragment : Fragment() {
                 filterMenuItems(query)
                 return true
             }
-
             override fun onQueryTextChange(newText: String): Boolean {
                 filterMenuItems(newText)
                 return true

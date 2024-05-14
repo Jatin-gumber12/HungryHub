@@ -195,22 +195,21 @@ class HistoryFragment : Fragment() {
 
     private fun setDataInRecentBuyItem()
     {
+       val recentOrderItem = listoforderitem.firstOrNull()
+       recentOrderItem?.let {
+           with(binding) {
+               recentbuyfoodname.text = it.foodnames?.firstOrNull()?: ""
+               recentfoodprice.text= it.foodprices?.firstOrNull()?: ""
+               val image = it.foodimages?.firstOrNull()?: ""
+               Glide.with(requireContext()).load(image).into(recentbuyfoodimage)
 
-        binding.recentbuyitem.visibility = View.VISIBLE
-        binding.apply {
-            recentbuyfoodname.text = listoforderitem[0].foodnames?.get(0) ?: ""
-            recentfoodprice.text  =  listoforderitem[0].foodprices?.get(0) ?: ""
-            var image  =  listoforderitem[0].foodimages?.get(0) ?: ""
-            val uriString = image
-            val uri = Uri.parse(uriString)
-            Glide.with(requireContext()).load(uri).into(recentbuyfoodimage)
-            var isorderaccepted = listoforderitem[0].orderisAccepted
+               val isOrderAccepted = listoforderitem[0].orderisAccepted
+         Log.d("Order Accepted","setDataInRecentBuyItem : $isOrderAccepted")
+           if(isOrderAccepted){
+               recentorderstatus.background.setTint(Color.GREEN)
+               receivedButton.visibility = View.VISIBLE
 
-            if (isorderaccepted)
-            {
-                recentorderstatus.background.setTint(Color.GREEN)
-                receivedButton.visibility = View.VISIBLE
-            }
+           }}
 
         }
 

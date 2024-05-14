@@ -104,7 +104,10 @@ id detailDescription
 id detailFoodImage
 id detailFoodName
 id detailIngredients
-id dontbutton
+id donthavebutton
+id editButton
+id editTextTextEmailAddress
+id editTextTextPassword
 id etaddress
 id etemail
 id etname
@@ -112,12 +115,14 @@ id etphone
 id etxtEmail
 id etxtName
 id etxtPassword
+id facebookbutton
 id foodimage
 id foodname
 id foodprice
 id foodquantity
 id fragmentContainerView
 id goHome
+id googlebutton
 id historyFragment
 id homeFragment
 id imageView
@@ -166,9 +171,8 @@ id textView17
 id textView18
 id textView19
 id textView2
-id textView21
 id textView22
-id textView23
+id textView24
 id textView25
 id textView26
 id textView27

@@ -3537,7 +3537,7 @@ id disableScroll
 id disjoint
 id donate_with
 id donate_with_google
-id dontbutton
+id donthavebutton
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3552,6 +3552,9 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editButton
+id editTextTextEmailAddress
+id editTextTextPassword
 id edit_query
 id edit_text_id
 id elastic
@@ -3570,6 +3573,7 @@ id etxtPassword
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id facebookbutton
 id fade
 id fill
 id fill_horizontal
@@ -3601,6 +3605,7 @@ id googleMaterial2
 id google_wallet_classic
 id google_wallet_grayscale
 id google_wallet_monochrome
+id googlebutton
 id graph
 id graph_wrap
 id grayscale
@@ -3928,9 +3933,8 @@ id textView17
 id textView18
 id textView19
 id textView2
-id textView21
 id textView22
-id textView23
+id textView24
 id textView25
 id textView26
 id textView27
