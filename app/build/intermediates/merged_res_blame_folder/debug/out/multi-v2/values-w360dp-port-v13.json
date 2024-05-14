@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.hungryhub.app-mergeDebugResources-3:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.example.hungryhub.app-mergeDebugResources-58:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\caches\\transforms-3\\e2fcfa154526e617e5a0d1f27fdbcf4a\\transformed\\material-1.11.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\aman nishad\\.gradle\\caches\\transforms-3\\e2fcfa154526e617e5a0d1f27fdbcf4a\\transformed\\material-1.11.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

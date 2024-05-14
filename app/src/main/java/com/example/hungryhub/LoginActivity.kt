@@ -136,7 +136,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         if(auth.currentUser != null)
         {
-            startActivity(Intent(this, HomeFragment::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
