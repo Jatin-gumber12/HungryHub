@@ -1,19 +1,47 @@
 [
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_splash_screen.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/activity_splash_screen.xml"
-    },
-    {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/popular_item.xml",
         "source": "com.example.hungryhub.app-main-7:/layout/popular_item.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_menu_bottom_sheet.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_menu_bottom_sheet.xml"
-    },
-    {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_home.xml",
         "source": "com.example.hungryhub.app-main-7:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_notification_bottom.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/fragment_notification_bottom.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/but_againitem.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/but_againitem.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/recent_buy_item.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/recent_buy_item.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_cart.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_login.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_recent_order_history.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/activity_recent_order_history.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_history.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_splash_screen.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_menu_bottom_sheet.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/fragment_menu_bottom_sheet.xml"
     },
     {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_congrats_bottom_sheet.xml",
@@ -40,24 +68,12 @@
         "source": "com.example.hungryhub.app-main-7:/layout/activity_start.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_notification_bottom.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_notification_bottom.xml"
-    },
-    {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/but_againitem.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/but_againitem.xml"
-    },
-    {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/notification_item.xml",
         "source": "com.example.hungryhub.app-main-7:/layout/notification_item.xml"
     },
     {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/menu_item.xml",
         "source": "com.example.hungryhub.app-main-7:/layout/menu_item.xml"
-    },
-    {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_cart.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_cart.xml"
     },
     {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_details_activtity.xml",
@@ -76,15 +92,7 @@
         "source": "com.example.hungryhub.app-main-7:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_login.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/activity_login.xml"
-    },
-    {
         "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_search.xml",
         "source": "com.example.hungryhub.app-main-7:/layout/fragment_search.xml"
-    },
-    {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_history.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_history.xml"
     }
 ]

@@ -3,77 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingStart="6dp"
-    android:background="@color/white"
     android:paddingEnd="6dp"
-    tools:context=".fragment.ProfileFragment">
+    tools:context=".Fragment.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/profileedittextshape"
-        android:elevation="2dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_weight="1"
-            android:text="Name"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/editTxt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="Adam" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="32dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/profileedittextshape"
             android:elevation="2dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="Address"
+                android:text="Name"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/etname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:inputType="textMultiLine"
-                android:hint="Enter your address"/>
+                android:inputType="text"
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,26 +53,62 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/profileedittextshape"
             android:elevation="2dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="E-mail"
+                android:text="Address"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/etaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:maxHeight="100dp"
+                android:inputType="textMultiLine"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/profileedittextshape"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etemail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:hint="adam@gmail.com"/>
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
@@ -115,42 +120,45 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/profileedittextshape"
             android:elevation="2dp"
-            android:gravity="center"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:text="@string/phone"
+                android:text="Phone"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etphone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="phone"
-                android:hint="1234567890"/>
+                android:text="" />
         </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button7"
-        android:background="@drawable/proceedbutton"
-        android:elevation="5dp"
-        android:layout_marginBottom="32dp"
-        android:textAllCaps="false"
+        android:id="@+id/saveinformation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_gravity="bottom"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/proceedbutton"
+        android:elevation="5dp"
+        android:text="Save Information"
+        android:textAllCaps="false"
         android:textColor="@color/text_color"
-        android:text="@string/save_information" />
+        android:textSize="20sp" />
+
 
 </FrameLayout>

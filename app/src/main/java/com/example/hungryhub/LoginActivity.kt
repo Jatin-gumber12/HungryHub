@@ -1,148 +1,144 @@
 package com.example.hungryhub
 
-import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import com.example.hungryhub.Fragment.HomeFragment
+import com.example.hungryhub.SharedPreference.ProfileSavedPreferences
 import com.example.hungryhub.databinding.ActivityLoginBinding
-import com.example.hungryhub.databinding.ActivitySignBinding
-import com.example.hungryhub.fragment.HomeFragment
-import com.example.hungryhub.model.UserModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.firebase.Firebase
-import com.google.firebase.auth.AuthCredential
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.database
-import java.util.zip.Inflater
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
-    private lateinit var email: String
-    private lateinit var password: String
-    private  val userName: String?= null
-    private lateinit var database: DatabaseReference
-    private lateinit var googleSignInClient: GoogleSignInClient
-    private val binding:ActivityLoginBinding by lazy {
+    private val binding: ActivityLoginBinding by lazy {
         ActivityLoginBinding.inflate(layoutInflater)
     }
+
+    private lateinit var email: String
+    private lateinit var password: String
+    private lateinit var auth: FirebaseAuth
+
+    lateinit var mGoogleSignInClient: GoogleSignInClient
+    val Req_Code: Int = 123
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        auth = Firebase.auth
-        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
-        database = Firebase.database.reference
-
-        googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions)
-
+        auth = FirebaseAuth.getInstance()
+        FirebaseApp.initializeApp(this)
         binding.loginbutton.setOnClickListener {
-            email = binding.etxtEmail.text.toString().trim()
-            password = binding.etxtPassword.text.toString().trim()
 
-            if (email.isEmpty() || password.isBlank()) {
-                Toast.makeText(this, "Fill all the details", Toast.LENGTH_SHORT).show()
-            } else {
-                createAccount()
-                Toast.makeText(this, "Login Successfully", Toast.LENGTH_SHORT).show()
+            email = binding.editTextTextEmailAddress.toString()
+            password = binding.editTextTextPassword.toString()
+            if(email.isBlank() || password.isBlank())
+            {
+                Toast.makeText(this@LoginActivity, "Please Enter All data", Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                loginUser()  //
             }
         }
-        binding.dontbutton.setOnClickListener {
-            val intent = Intent(this,SignActivity::class.java)
+        binding.donthavebutton.setOnClickListener {
+            val intent = Intent(this, SignActivity::class.java)
             startActivity(intent)
         }
+        binding.googlebutton.setOnClickListener {
+            signInGoogle()
+        }
 
-        binding.btnGoogle.setOnClickListener {
-            val signInIntent: Intent = googleSignInClient.signInIntent
-            launcher.launch(signInIntent)
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+    }
+
+    private fun loginUser() {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    var intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(ContentValues.TAG, "signInWithEmail:failure", task.exception)
+                    Toast.makeText(
+                        baseContext,
+                        "Authentication failed . Please try again",
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                }
+            }
+
+    }
+
+    private fun signInGoogle() {
+        val signInIntent: Intent = mGoogleSignInClient.signInIntent
+        startActivityForResult(signInIntent, Req_Code)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == Req_Code) {
+            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
+            handleResult(task)
         }
     }
 
-    private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){result ->
 
-        if (result.resultCode == Activity.RESULT_OK) {
+    private fun handleResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account: GoogleSignInAccount? = completedTask.getResult(ApiException::class.java)
+            if (account != null) {
+                UpdateUI(account)
+            }
+        } catch (e: ApiException) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
 
-            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+    // this is where we update the UI after Google signin takes place
+    private fun UpdateUI(account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+        auth.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                val account: GoogleSignInAccount? = task.result
-                val credentials: AuthCredential =
-                    GoogleAuthProvider.getCredential(account?.idToken, null)
-
-                auth.signInWithCredential(credentials).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this, "Sign In Failed", Toast.LENGTH_SHORT).show()
-
-                    }
-                }
-            } else {
-                Toast.makeText(this, "Sign In Failed", Toast.LENGTH_SHORT).show()
+                saveDetailsToSharedPreference(account.displayName.toString(),account.email.toString())
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
     }
 
-    private fun createAccount() {
-        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener {
-            task ->
 
-            if(task.isSuccessful){
-                val user = auth.currentUser
-                updateUI(user)
-            }else{
-                auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
-                    task ->
-
-                    if(task.isSuccessful){
-                        saveUserData()
-                        val  user = auth.currentUser
-                        updateUI(user)
-                    }else{
-                        Toast.makeText(this,"Sign In Failed", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-            }
-        }
-
+    private fun saveDetailsToSharedPreference(name : String , email : String)
+    {
+        ProfileSavedPreferences.setName(this, name)
+        ProfileSavedPreferences.setEmail(this, email)
     }
 
-    private fun saveUserData() {
-        email = binding.etxtEmail.text.toString().trim()
-        password = binding.etxtPassword.text.toString().trim()
-
-        val user = UserModel(userName, email,password)
-        val userId = FirebaseAuth.getInstance().currentUser!!.uid
-
-        database.child("user").child(userId).setValue(user)
-    }
 
     override fun onStart() {
         super.onStart()
-
-        val currentUser= auth.currentUser
-        if(currentUser!=null){
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+        if(auth.currentUser != null)
+        {
+            startActivity(Intent(this, HomeFragment::class.java))
             finish()
         }
+    }
 
-    }
-    private fun updateUI(user: FirebaseUser?) {
-        val intent = Intent(this,HomeFragment::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

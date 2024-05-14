@@ -67,8 +67,8 @@ class MenuAdapter(
         val intent = Intent(requireContext,DetailsActivity::class.java).apply {
             putExtra("MenuItemName",menuItem.foodName)
             putExtra("MenuItemImage",menuItem.foodImage)
-            putExtra("MenuItemDescription",menuItem.foodDesc)
-            putExtra("MenuItemIngredients",menuItem.foodIngredients)
+            putExtra("MenuItemDescription",menuItem.foodDescription)
+            putExtra("MenuItemIngredients",menuItem.foodIngredient)
             putExtra("MenuItemPrice",menuItem.foodPrice)
         }
         //start the details activity
