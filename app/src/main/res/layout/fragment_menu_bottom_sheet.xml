@@ -23,7 +23,7 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/cart" />
+        android:text="Menu" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menuRecyclerView"

@@ -73,7 +73,7 @@ id MenuFoodName
 id MenuImage
 id MenuPrice
 id PlaceMyOrder
-id PopulerRecyclerView
+id PopularRecyclerView
 id PricePopular
 id addToCart
 id addToCartPopular

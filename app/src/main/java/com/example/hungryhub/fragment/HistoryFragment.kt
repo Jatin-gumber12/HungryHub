@@ -59,9 +59,9 @@ class HistoryFragment : Fragment() {
     }
 
     private fun updatePaymentOrderStatus() {
-        var itempushkey = listoforderitem[0].itempushkey
+        var itempushkey = listoforderitem[0].itemPushKey
         var completeorderref = database.reference.child("CompletedOrderDetails").child(itempushkey!!)
-        completeorderref.child("paymentisReceived").setValue(true)
+        completeorderref.child("paymentReceived").setValue(true)
     }
 
 
@@ -90,10 +90,10 @@ class HistoryFragment : Fragment() {
                 listoforderitem.reverse()
 //                listoforderitem.sortByDescending { it.timestamp ?: 0L }
                 for (item in listoforderitem) {
-                    item.foodnames!!.forEach { foodnames ->
+                    item.foodNames!!.forEach { foodnames ->
 
-                        Log.d("firstiem",listoforderitem[0].foodnames?.get(0) ?: "")
-                        Log.d("firstisfdem",listoforderitem[0].foodimages?.get(0) ?: "")
+                        Log.d("firstiem",listoforderitem[0].foodNames?.get(0) ?: "")
+                        Log.d("firstisfdem",listoforderitem[0].foodImages?.get(0) ?: "")
                     }
 
 //                  item.foodimages!!.forEach { foodimage ->
@@ -198,12 +198,12 @@ class HistoryFragment : Fragment() {
        val recentOrderItem = listoforderitem.firstOrNull()
        recentOrderItem?.let {
            with(binding) {
-               recentbuyfoodname.text = it.foodnames?.firstOrNull()?: ""
-               recentfoodprice.text= it.foodprices?.firstOrNull()?: ""
-               val image = it.foodimages?.firstOrNull()?: ""
+               recentbuyfoodname.text = it.foodNames?.firstOrNull()?: ""
+               recentfoodprice.text= it.foodPrices?.firstOrNull()?: ""
+               val image = it.foodImages?.firstOrNull()?: ""
                Glide.with(requireContext()).load(image).into(recentbuyfoodimage)
 
-               val isOrderAccepted = listoforderitem[0].orderisAccepted
+               val isOrderAccepted = listoforderitem[0].orderAccepted
          Log.d("Order Accepted","setDataInRecentBuyItem : $isOrderAccepted")
            if(isOrderAccepted){
                recentorderstatus.background.setTint(Color.GREEN)
@@ -222,9 +222,9 @@ class HistoryFragment : Fragment() {
         var listoffirstfoodprices = mutableListOf<String>()
         for (i in (1..listoforderitem.size-1))
         {
-            listoffirstfoodnames.add(listoforderitem[i].foodnames?.get(0) ?: "")
-            listoffirstfoodimages.add(listoforderitem[i].foodimages?.get(0) ?: "")
-            listoffirstfoodprices.add(listoforderitem[i].foodprices?.get(0) ?: "")
+            listoffirstfoodnames.add(listoforderitem[i].foodNames?.get(0) ?: "")
+            listoffirstfoodimages.add(listoforderitem[i].foodImages?.get(0) ?: "")
+            listoffirstfoodprices.add(listoforderitem[i].foodPrices?.get(0) ?: "")
         }
         val rv = binding.ButAgainRecyclerView
         rv.layoutManager = LinearLayoutManager(requireContext())
@@ -245,9 +245,9 @@ class HistoryFragment : Fragment() {
         var buyAgainItemNewPushKey =  database.reference.child("OrderDetails").push().key
 
         var currentime = System.currentTimeMillis()
-        var buyAgainOrderDetails = OrderDetails(userId,listoforderitem[positon+1].username,listoforderitem[positon+1].foodnames,
-            listoforderitem[positon+1].foodprices, listoforderitem[positon+1].foodimages,listoforderitem[positon+1].foodquantitys,
-            listoforderitem[positon+1].address,   listoforderitem[positon+1].totalprice,   listoforderitem[positon+1].phonenumber,   currentime,
+        var buyAgainOrderDetails = OrderDetails(userId,listoforderitem[positon+1].userName,listoforderitem[positon+1].foodNames,
+            listoforderitem[positon+1].foodPrices, listoforderitem[positon+1].foodImages,listoforderitem[positon+1].foodQuantities,
+            listoforderitem[positon+1].address,   listoforderitem[positon+1].totalPrice,   listoforderitem[positon+1].phoneNumber,   currentime,
             buyAgainItemNewPushKey,false,false)
 
         var buyagainref = database.reference.child("OrderDetails").child(buyAgainItemNewPushKey!!).setValue(buyAgainOrderDetails).addOnSuccessListener {
@@ -262,10 +262,10 @@ class HistoryFragment : Fragment() {
 
     @SuppressLint("SuspiciousIndentation")
     private fun addThisItemToBuyHistory(buyAgainOrderDetails: OrderDetails) {
-        var buhistoryref = database.reference.child("Users").child(userId).child("BuyHistory").child(buyAgainOrderDetails.itempushkey!!)
+        var buhistoryref = database.reference.child("Users").child(userId).child("BuyHistory").child(buyAgainOrderDetails.itemPushKey!!)
         buhistoryref.setValue(buyAgainOrderDetails).addOnSuccessListener {
             Log.d("buyhistory","item added to buy history")
-            ProfileSavedPreferences.setItemPushKey(requireContext(), buyAgainOrderDetails.itempushkey!!)
+            ProfileSavedPreferences.setItemPushKey(requireContext(), buyAgainOrderDetails.itemPushKey!!)
         }.addOnFailureListener{
             Log.d("buyhistory","failed to add item to buy history")
         }

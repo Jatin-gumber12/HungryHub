@@ -1,4 +1,4 @@
-package com.example.hungryhub.Fragment
+package com.example.hungryhub.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.example.hungryhub.MenuBottomSheetFragment
 import com.example.hungryhub.model.MenuItem
 import com.example.hungryhub.R
-import com.example.hungryhub.adaptar.PopularAdapter
+import com.example.hungryhub.adapter.MenuAdapter
 import com.example.hungryhub.databinding.FragmentHomeBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -31,6 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var imageuris: MutableList<String>
     private lateinit var ingredients: MutableList<String>
     private lateinit var foodDescriptions: MutableList<String>
+    private lateinit var MenuItems : MutableList<MenuItem>
 
 
     override fun onCreateView(
@@ -43,6 +44,7 @@ class HomeFragment : Fragment() {
             val bottomSheetDialog = MenuBottomSheetFragment()
             bottomSheetDialog.show(parentFragmentManager,"Test")
         }
+        retrieveMenuItems()
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,8 +56,6 @@ class HomeFragment : Fragment() {
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
         imageSlider.setImageList(imageList, ScaleTypes.FIT)
-
-        retrieveMenuItems()
 //        val foodName = listOf("Burger", "sandwich", "momo", "item")
 //        val Price = listOf("$5", "$7", "$8", "$10")
 //        val populerFoodImages =
@@ -71,10 +71,11 @@ class HomeFragment : Fragment() {
         // Get reference to the Firebase database
         database = FirebaseDatabase.getInstance()
 
-        val foodRef: DatabaseReference = database.reference.child("Vendor").child("Menu")
+        val foodRef: DatabaseReference = database.reference .child("menu")
 //        Toast.makeText(this@AllItemActivity, "${foodRef.toString()}", Toast.LENGTH_SHORT).show()
 
         // Array to store the details  of all menu items
+        MenuItems = mutableListOf()
         foodNames = mutableListOf()
         foodPrices= mutableListOf()
         foodDescriptions = mutableListOf()
@@ -87,7 +88,7 @@ class HomeFragment : Fragment() {
                 // Loop through each food item
                 for (foodSnapshot in dataSnapshot.children) {
                     // Get the FoodItem object from the child node
-                    val menuItem = foodSnapshot.getValue(MenuItem::class.java)
+                    val menuItem:MenuItem? = foodSnapshot.getValue(MenuItem::class.java)
 
                     // Add the foodname to the foodNames list
                     menuItem?.foodName?.let {
@@ -105,6 +106,7 @@ class HomeFragment : Fragment() {
                     menuItem?.foodDescription?.let {
                         foodDescriptions.add(it)
                     }
+                    menuItem?.let { MenuItems.add(it) }
                 }
 
                 settingMenuItemInRandomOrder()
@@ -121,6 +123,7 @@ class HomeFragment : Fragment() {
 
     private fun settingMenuItemInRandomOrder() {
         val indices = foodNames.indices.toList().shuffled()
+        val index = MenuItems.indices.toList().shuffled()
 
         // Use the shuffled indices to shuffle all the lists
         val shuffledFoodNames = indices.map { foodNames[it] }
@@ -128,27 +131,26 @@ class HomeFragment : Fragment() {
         val shuffledImageUris = indices.map { imageuris[it] }
         val shuffledIngredients = indices.map { ingredients[it] }
         val shuffledFoodDescriptions = indices.map { foodDescriptions[it] }
+        val shuffledMenuItem = index.map{MenuItems[it]}
 
         // Select a subset of items (e.g., 6 items)
         val numItemsToShow = 6
+        val subsetMenuItem = shuffledMenuItem.take(numItemsToShow)
         val subsetFoodNames = shuffledFoodNames.take(numItemsToShow)
         val subsetFoodPrices = shuffledFoodPrices.take(numItemsToShow)
         val subsetImageUris = shuffledImageUris.take(numItemsToShow)
         val subsetIngredients = shuffledIngredients.take(numItemsToShow)
         val subsetFoodDescriptions = shuffledFoodDescriptions.take(numItemsToShow)
-        setAdapter(subsetFoodNames, subsetFoodPrices, subsetImageUris, subsetFoodDescriptions, subsetIngredients)
+        setPopularItemAdapter(subsetMenuItem)
+    }
+
+    private fun setPopularItemAdapter(subsetMenuItem: List<MenuItem>) {
+        val adapter = MenuAdapter(subsetMenuItem,requireContext())
+        binding.PopularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.PopularRecyclerView.adapter = adapter
     }
 
 
-    private  fun setAdapter(subsetFoodNames : List<String>, subsetFoodPrices :  List<String>, subsetImageUris: List<String>, subsetFoodDescriptions: List<String>, subsetIngredients: List<String>)
-    {
-        val adapter = PopularAdapter(
-            subsetFoodNames, subsetFoodPrices, subsetImageUris, subsetFoodDescriptions, subsetIngredients,
-            requireContext())
-
-        binding.PopulerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.PopulerRecyclerView.adapter = adapter
-    }
 }
 
 /*

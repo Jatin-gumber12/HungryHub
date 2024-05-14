@@ -3333,7 +3333,7 @@ int id MenuImage 0x7f08000b
 int id MenuPrice 0x7f08000c
 int id NO_DEBUG 0x7f08000d
 int id PlaceMyOrder 0x7f08000e
-int id PopulerRecyclerView 0x7f08000f
+int id PopularRecyclerView 0x7f0802ab
 int id PricePopular 0x7f080010
 int id SHIFT 0x7f080011
 int id SHOW_ALL 0x7f080012

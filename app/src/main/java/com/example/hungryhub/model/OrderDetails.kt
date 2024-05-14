@@ -5,18 +5,18 @@ import android.os.Parcelable
 import com.google.firebase.database.ServerValue
 
 class OrderDetails() : Parcelable {
-    var useruid: String? = null
-    var username: String? = null
-    var foodnames: MutableList<String>? = null
-    var foodimages: MutableList<String>? = null
-    var foodprices: MutableList<String>? = null
-    var foodquantitys: MutableList<Int>? = null
+    var userUid: String? = null
+    var userName: String? = null
+    var foodNames: MutableList<String>? = null
+    var foodImages: MutableList<String>? = null
+    var foodPrices: MutableList<String>? = null
+    var foodQuantities: MutableList<Int>? = null
     var address: String? = null
-    var totalprice: String? = null
-    var phonenumber: String? = null
-    var orderisAccepted: Boolean = false
-    var paymentisReceived: Boolean = false
-    var itempushkey: String? = null
+    var totalPrice: String? = null
+    var phoneNumber: String? = null
+    var orderAccepted: Boolean = false
+    var paymentReceived: Boolean = false
+    var itemPushKey: String? = null
     var currentTime: Long = 0
 
 
@@ -32,55 +32,55 @@ class OrderDetails() : Parcelable {
         phonenumber: String?,
         currentTime : Long,
         itempushkey : String?,
-        orderisAccepted: Boolean ,
-        paymentisReceived: Boolean
+        orderAccepted: Boolean ,
+        paymentReceived: Boolean
     ) : this() {
-        this.useruid = useruid
-        this.username = username
-        this.foodnames = foodnames
-        this.foodimages = foodimages
-        this.foodprices = foodprices
-        this.foodquantitys = foodquantitys
+        this.userUid = useruid
+        this.userName = username
+        this.foodNames = foodnames
+        this.foodImages = foodimages
+        this.foodPrices = foodprices
+        this.foodQuantities = foodquantitys
         this.address = address
-        this.totalprice = totalprice
-        this.phonenumber = phonenumber
-        this.orderisAccepted = orderisAccepted
+        this.totalPrice = totalprice
+        this.phoneNumber = phonenumber
+        this.orderAccepted = orderAccepted
         this.currentTime = currentTime
-        this.paymentisReceived =  paymentisReceived
-        this.itempushkey = itempushkey
+        this.paymentReceived =  paymentReceived
+        this.itemPushKey = itempushkey
     }
 
     // Implementing Parcelable interface methods
     constructor(parcel: Parcel) : this() {
-        useruid = parcel.readString()
-        username = parcel.readString()
-        foodnames = parcel.createStringArrayList()
-        foodimages = parcel.createStringArrayList()
-        foodprices = parcel.createStringArrayList()
-        foodquantitys = parcel.createIntArray()?.toMutableList()
+        userUid = parcel.readString()
+        userName = parcel.readString()
+        foodNames = parcel.createStringArrayList()
+        foodImages = parcel.createStringArrayList()
+        foodPrices = parcel.createStringArrayList()
+        foodQuantities = parcel.createIntArray()?.toMutableList()
         address = parcel.readString()
-        totalprice = parcel.readString()
-        phonenumber = parcel.readString()
-        orderisAccepted = parcel.readByte() != 0.toByte()
+        totalPrice = parcel.readString()
+        phoneNumber = parcel.readString()
+        orderAccepted = parcel.readByte() != 0.toByte()
         currentTime = parcel.readLong()
-        paymentisReceived = parcel.readByte() != 0.toByte()
-        itempushkey = parcel.readString()
+        paymentReceived = parcel.readByte() != 0.toByte()
+        itemPushKey = parcel.readString()
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeString(useruid)
-        parcel.writeString(username)
-        parcel.writeStringList(foodnames)
-        parcel.writeStringList(foodimages)
-        parcel.writeStringList(foodprices)
-        parcel.writeIntArray(foodquantitys?.toIntArray())
+        parcel.writeString(userUid)
+        parcel.writeString(userName)
+        parcel.writeStringList(foodNames)
+        parcel.writeStringList(foodImages)
+        parcel.writeStringList(foodPrices)
+        parcel.writeIntArray(foodQuantities?.toIntArray())
         parcel.writeString(address)
-        parcel.writeString(totalprice)
-        parcel.writeString(phonenumber)
-        parcel.writeByte(if (orderisAccepted) 1 else 0)
+        parcel.writeString(totalPrice)
+        parcel.writeString(phoneNumber)
+        parcel.writeByte(if (orderAccepted) 1 else 0)
         parcel.writeLong(currentTime)
-        parcel.writeByte(if (paymentisReceived) 1 else 0)
-        parcel.writeString(itempushkey)
+        parcel.writeByte(if (paymentReceived) 1 else 0)
+        parcel.writeString(itemPushKey)
     }
 
     override fun describeContents(): Int {
