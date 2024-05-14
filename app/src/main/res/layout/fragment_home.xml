@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment">
+    android:background="@color/white"
+    tools:context=".Fragment.HomeFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -13,7 +14,6 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="5dp"
-        android:padding="16dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,31 +28,34 @@
             app:iss_no_dots="true"
             app:iss_period="2000"
             app:iss_text_align="CENTER" />
+
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/PopularRecycleView"
+        android:id="@+id/PopulerRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ViewAll" />
+        app:layout_constraintTop_toBottomOf="@+id/viewAllMenu"
+        tools:listitem="@layout/popular_item" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/popular"
+        android:text="Pouplar"
+        android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/ViewAll"
+        android:id="@+id/viewAllMenu"
         android:layout_width="80dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
@@ -60,7 +63,8 @@
         android:background="@drawable/textviewshape"
         android:elevation="5dp"
         android:gravity="center"
-        android:text="@string/view_menu"
+        android:text="View Menu"
+        android:textAlignment="gravity"
         android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />

@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HungryHub"
         tools:targetApi="31">
+
         <activity
-            android:name=".DetailsActivtity"
+            android:name=".RecentOrderHistory"
             android:exported="false" />
         <activity
             android:name=".DetailsActivity"
@@ -36,6 +37,7 @@
         <activity
             android:name=".StartActivity"
             android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">

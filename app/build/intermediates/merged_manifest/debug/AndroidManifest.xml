@@ -74,7 +74,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.HungryHub" >
         <activity
-            android:name="com.example.hungryhub.DetailsActivtity"
+            android:name="com.example.hungryhub.RecentOrderHistory"
             android:exported="false" />
         <activity
             android:name="com.example.hungryhub.DetailsActivity"
