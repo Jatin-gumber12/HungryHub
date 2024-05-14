@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.hungryhub.app-mergeDebugResources-58:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.example.hungryhub.app-mergeDebugResources-3:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\aman nishad\\.gradle\\caches\\transforms-3\\e2fcfa154526e617e5a0d1f27fdbcf4a\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\caches\\transforms-3\\e2fcfa154526e617e5a0d1f27fdbcf4a\\transformed\\material-1.11.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

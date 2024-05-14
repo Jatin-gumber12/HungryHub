@@ -1,12 +1,12 @@
-#Tue May 14 15:31:27 IST 2024
-base.0=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
-base.3=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.4=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.5=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.6=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
-base.7=C\:\\Users\\aman nishad\\AndroidStudioProjects\\HungryHub-Streamlining-Food-Ordering-with-Firebase\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Wed May 15 03:50:57 IST 2024
+base.0=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.4=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.5=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.6=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.7=C\:\\Users\\Ayush RAi\\AndroidStudioProjects\\HungryHub\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=10/classes.dex

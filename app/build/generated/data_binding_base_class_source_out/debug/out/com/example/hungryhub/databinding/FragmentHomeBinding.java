@@ -23,7 +23,7 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView PopulerRecyclerView;
+  public final RecyclerView PopularRecyclerView;
 
   @NonNull
   public final CardView cardView;
@@ -38,11 +38,11 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView viewAllMenu;
 
   private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView PopulerRecyclerView, @NonNull CardView cardView,
+      @NonNull RecyclerView PopularRecyclerView, @NonNull CardView cardView,
       @NonNull ImageSlider imageSlider, @NonNull TextView textView18,
       @NonNull TextView viewAllMenu) {
     this.rootView = rootView;
-    this.PopulerRecyclerView = PopulerRecyclerView;
+    this.PopularRecyclerView = PopularRecyclerView;
     this.cardView = cardView;
     this.imageSlider = imageSlider;
     this.textView18 = textView18;
@@ -76,9 +76,9 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.PopulerRecyclerView;
-      RecyclerView PopulerRecyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (PopulerRecyclerView == null) {
+      id = R.id.PopularRecyclerView;
+      RecyclerView PopularRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (PopularRecyclerView == null) {
         break missingId;
       }
 
@@ -106,7 +106,7 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, PopulerRecyclerView, cardView,
+      return new FragmentHomeBinding((ConstraintLayout) rootView, PopularRecyclerView, cardView,
           imageSlider, textView18, viewAllMenu);
     }
     String missingId = rootView.getResources().getResourceName(id);

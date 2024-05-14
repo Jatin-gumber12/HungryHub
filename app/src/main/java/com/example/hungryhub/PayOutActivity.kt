@@ -122,9 +122,9 @@ class PayOutActivity : AppCompatActivity() {
     private fun addOrderToHistory(orderDetails: OrderDetails)
     {
 
-        database.child("Users").child(userId).child("BuyHistory").child(orderDetails.itempushkey!!).setValue(orderDetails).addOnSuccessListener {
+        database.child("Users").child(userId).child("BuyHistory").child(orderDetails.itemPushKey!!).setValue(orderDetails).addOnSuccessListener {
             Log.d("buyhistory","item added to buy history")
-            ProfileSavedPreferences.setItemPushKey(this@PayOutActivity, orderDetails.itempushkey!!)  // it is for notificatio feature
+            ProfileSavedPreferences.setItemPushKey(this@PayOutActivity, orderDetails.itemPushKey!!)  // it is for notificatio feature
         }.addOnFailureListener {
             Log.d("buyhistory","failed to add item to buy history")
         }

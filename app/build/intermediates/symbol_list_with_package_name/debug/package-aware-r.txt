@@ -3334,7 +3334,7 @@ id MenuImage
 id MenuPrice
 id NO_DEBUG
 id PlaceMyOrder
-id PopulerRecyclerView
+id PopularRecyclerView
 id PricePopular
 id SHIFT
 id SHOW_ALL

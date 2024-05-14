@@ -27,10 +27,10 @@ class RecentOrderHistory : AppCompatActivity() {
 
         val recentorderitemdetails = intent.getParcelableExtra<OrderDetails>("RecentOrderItem")
         if (recentorderitemdetails!=null) {
-            allFoodNames = recentorderitemdetails.foodnames as ArrayList<String>
-            allFoodImages = recentorderitemdetails.foodimages as ArrayList<String>
-            allFoodPrices = recentorderitemdetails.foodprices as ArrayList<String>
-            allFoodQuantitys = recentorderitemdetails.foodquantitys as ArrayList<Int>
+            allFoodNames = recentorderitemdetails.foodNames as ArrayList<String>
+            allFoodImages = recentorderitemdetails.foodImages as ArrayList<String>
+            allFoodPrices = recentorderitemdetails.foodPrices as ArrayList<String>
+            allFoodQuantitys = recentorderitemdetails.foodQuantities as ArrayList<Int>
         }
 
         binding.backButton.setOnClickListener {

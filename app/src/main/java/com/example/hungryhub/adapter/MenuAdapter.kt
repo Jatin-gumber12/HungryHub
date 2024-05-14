@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -66,10 +64,11 @@ class MenuAdapter(
         // a intent to open detail Activity
         val intent = Intent(requireContext,DetailsActivity::class.java).apply {
             putExtra("MenuItemName",menuItem.foodName)
+            putExtra("MenuItemPrice",menuItem.foodPrice)
             putExtra("MenuItemImage",menuItem.foodImage)
             putExtra("MenuItemDescription",menuItem.foodDescription)
             putExtra("MenuItemIngredients",menuItem.foodIngredient)
-            putExtra("MenuItemPrice",menuItem.foodPrice)
+
         }
         //start the details activity
         requireContext.startActivity(intent)
