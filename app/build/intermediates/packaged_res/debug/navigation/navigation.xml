@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.hungryhub.fragment.HomeFragment"
+        android:name="com.example.hungryhub.Fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.example.hungryhub.fragment.CartFragment"
+        android:name="com.example.hungryhub.Fragment.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
@@ -21,10 +21,10 @@
         android:label="SearchFragment" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.hungryhub.fragment.HistoryFragment"
+        android:name="com.example.hungryhub.Fragment.HistoryFragment"
         android:label="HistoryFragment" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.hungryhub.fragment.ProfileFragment"
+        android:name="com.example.hungryhub.Fragment.ProfileFragment"
         android:label="ProfileFragment" />
 </navigation>

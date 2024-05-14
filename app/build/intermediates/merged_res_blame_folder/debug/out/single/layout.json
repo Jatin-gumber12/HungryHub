@@ -1,114 +1,98 @@
 [
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_profile.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_profile.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/recent_buy_item.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/recent_buy_item.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_pay_out.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_pay_out.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_congrats_bottom_sheet.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_congrats_bottom_sheet.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_start.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_start.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_notification_bottom.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_notification_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_menu_bottom_sheet.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_menu_bottom_sheet.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_details_activtity.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_details_activtity.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_splash_screen.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_splash_screen.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/menu_item.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/menu_item.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_cart.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_cart.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_start.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_start.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\popular_item.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\popular_item.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_recent_order_history.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_recent_order_history.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\cart_item.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\cart_item.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/popular_item.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/popular_item.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_search.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_search.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_cart.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_cart.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_blank.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_blank.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_profile.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_notification_bottom.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_notification_bottom.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_blank.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_blank.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\but_againitem.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\but_againitem.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_splash_screen.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_login.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_menu_bottom_sheet.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_menu_bottom_sheet.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/activity_login.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/activity_login.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_main.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_home.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/notification_item.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/notification_item.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_history.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_history.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_history.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_history.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_history.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_history.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_search.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\recent_buy_item.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\recent_buy_item.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_sign.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_sign.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\notification_item.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\notification_item.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/cart_item.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/cart_item.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_profile.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_profile.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_pay_out.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_pay_out.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_congrats_bottom_sheet.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_congrats_bottom_sheet.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/but_againitem.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/but_againitem.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_sign.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_sign.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_login.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_recent_order_history.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_recent_order_history.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/activity_choose_location.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/activity_choose_location.xml"
     },
     {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\menu_item.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\menu_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_choose_location.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_choose_location.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_details_activtity.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_details_activtity.xml"
-    },
-    {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_search.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_search.xml"
-    },
-    {
-        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_main.xml"
+        "merged": "com.example.hungryhub.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.example.hungryhub.app-main-62:/layout/fragment_home.xml"
     }
 ]

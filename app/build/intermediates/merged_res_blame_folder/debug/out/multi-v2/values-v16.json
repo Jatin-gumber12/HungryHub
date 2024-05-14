@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.hungryhub.app-mergeDebugResources-3:/values-v16/values-v16.xml",
+            "outputFile": "com.example.hungryhub.app-mergeDebugResources-58:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\caches\\transforms-3\\cde4c6a5f0399192d0a037c608d2c8fb\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\aman nishad\\.gradle\\caches\\transforms-3\\cde4c6a5f0399192d0a037c608d2c8fb\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
