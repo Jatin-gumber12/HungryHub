@@ -3,8 +3,9 @@ package com.example.hungryhub.model
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.firebase.database.ServerValue
+import java.io.Serializable
 
-class OrderDetails() : Parcelable {
+class OrderDetails() : Serializable {
     var userUid: String? = null
     var userName: String? = null
     var foodNames: MutableList<String>? = null
@@ -14,7 +15,7 @@ class OrderDetails() : Parcelable {
     var address: String? = null
     var totalPrice: String? = null
     var phoneNumber: String? = null
-    var orderAccepted: Boolean = false
+    var orderAccepted: Boolean = true
     var paymentReceived: Boolean = false
     var itemPushKey: String? = null
     var currentTime: Long = 0
@@ -67,7 +68,7 @@ class OrderDetails() : Parcelable {
         itemPushKey = parcel.readString()
     }
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
+    fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(userUid)
         parcel.writeString(userName)
         parcel.writeStringList(foodNames)
@@ -83,7 +84,7 @@ class OrderDetails() : Parcelable {
         parcel.writeString(itemPushKey)
     }
 
-    override fun describeContents(): Int {
+     fun describeContents(): Int {
         return 0
     }
 

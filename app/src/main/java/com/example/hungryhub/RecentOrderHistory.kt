@@ -2,21 +2,20 @@ package com.example.hungryhub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hungryhub.model.OrderDetails
 import com.example.hungryhub.adaptar.RecentBuyAdapter
 import com.example.hungryhub.databinding.ActivityRecentOrderHistoryBinding
-import com.example.hungryhub.databinding.ActivitySignBinding
 
 class RecentOrderHistory : AppCompatActivity() {
     private val binding : ActivityRecentOrderHistoryBinding by lazy {
         ActivityRecentOrderHistoryBinding.inflate(layoutInflater)
     }
-
-    private  lateinit  var allFoodNames : ArrayList<String>
-    private  lateinit  var allFoodImages : ArrayList<String>
-    private  lateinit  var allFoodPrices : ArrayList<String>
-    private  lateinit  var allFoodQuantitys : ArrayList<Int>
+    private var allFoodNames: ArrayList<String> = ArrayList()
+    private var allFoodImages: ArrayList<String> = ArrayList()
+    private var allFoodPrices: ArrayList<String> = ArrayList()
+    private var allFoodQuantitys: ArrayList<Int> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,13 +24,18 @@ class RecentOrderHistory : AppCompatActivity() {
 
         val intent = intent
 
-        val recentorderitemdetails = intent.getParcelableExtra<OrderDetails>("RecentOrderItem")
-        if (recentorderitemdetails!=null) {
-            allFoodNames = recentorderitemdetails.foodNames as ArrayList<String>
-            allFoodImages = recentorderitemdetails.foodImages as ArrayList<String>
-            allFoodPrices = recentorderitemdetails.foodPrices as ArrayList<String>
-            allFoodQuantitys = recentorderitemdetails.foodQuantities as ArrayList<Int>
+        val recentorderitemdetails = intent.getSerializableExtra("RecentOrderItem") as? ArrayList<OrderDetails>
+        recentorderitemdetails?.let { orderDetails ->
+            if (orderDetails.isNotEmpty()) {
+                val recentorderitemdetail = orderDetails[0]
+                allFoodNames = recentorderitemdetail.foodNames as? ArrayList<String> ?: ArrayList()
+                allFoodImages = recentorderitemdetail.foodImages as? ArrayList<String> ?: ArrayList()
+                allFoodPrices = recentorderitemdetail.foodPrices as? ArrayList<String> ?: ArrayList()
+                allFoodQuantitys = recentorderitemdetail.foodQuantities as? ArrayList<Int> ?: ArrayList()
+            }
+            Log.d("VALUES","$allFoodNames, $allFoodPrices,$allFoodImages,$allFoodQuantitys")
         }
+
 
         binding.backButton.setOnClickListener {
             finish()
