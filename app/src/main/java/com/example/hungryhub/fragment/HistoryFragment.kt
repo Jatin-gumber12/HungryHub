@@ -14,11 +14,14 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.hungryhub.CongratsBottomSheet
-import com.example.hungryhub.model.OrderDetails
 import com.example.hungryhub.RecentOrderHistory
+import com.example.hungryhub.RecentOrderItems
+import com.example.hungryhub.model.OrderDetails
+//import com.example.hungryhub.RecentOrderHistory
 import com.example.hungryhub.SharedPreference.ProfileSavedPreferences
 import com.example.hungryhub.adaptar.BuyAgainAdapter
 import com.example.hungryhub.databinding.FragmentHistoryBinding
+import com.example.hungryhub.databinding.RecentBuyItemBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -195,16 +198,18 @@ class HistoryFragment : Fragment() {
 
     private fun setDataInRecentBuyItem()
     {
+        binding.recentbuyitem.visibility = View.VISIBLE
        val recentOrderItem = listoforderitem.firstOrNull()
        recentOrderItem?.let {
            with(binding) {
                recentbuyfoodname.text = it.foodNames?.firstOrNull()?: ""
                recentfoodprice.text= it.foodPrices?.firstOrNull()?: ""
                val image = it.foodImages?.firstOrNull()?: ""
-               Glide.with(requireContext()).load(image).into(recentbuyfoodimage)
+               val uri = Uri.parse(image)
+               Glide.with(requireContext()).load(uri).into(recentbuyfoodimage)
 
-               val isOrderAccepted = listoforderitem[0].orderAccepted
-         Log.d("Order Accepted","setDataInRecentBuyItem : $isOrderAccepted")
+               val isOrderAccepted = true
+         Log.d("Order Accepted","setDataInRecentBuyItem : $isOrderAccepted $listoforderitem[0]")
            if(isOrderAccepted){
                recentorderstatus.background.setTint(Color.GREEN)
                receivedButton.visibility = View.VISIBLE
@@ -274,10 +279,18 @@ class HistoryFragment : Fragment() {
 
     private fun sendDataToRecentBuyActivity()
     {
-        var recentbuyorderdetails = listoforderitem[0]
-        var intent = Intent(requireContext(),RecentOrderHistory::class.java)
-        intent.putExtra("RecentOrderItem",recentbuyorderdetails)
-        startActivity(intent)
+//        var recentbuyorderdetails = listoforderitem[0]
+//        var intent = Intent(requireContext(),RecentOrderHistory::class.java)
+//        intent.putExtra("RecentOrderItem",recentbuyorderdetails)
+//        startActivity(intent)
+
+        listoforderitem.firstOrNull()?.let { recentBuy ->
+
+            val intent = Intent(requireContext(), RecentOrderHistory::class.java)
+            intent.putExtra("RecentBuyOrderItem", recentBuy)
+            // Pass recentBuy instead of listOfOrderItem
+            startActivity(intent)
+        }
     }
 
 }

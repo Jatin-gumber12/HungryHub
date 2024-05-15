@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.hungryhub.databinding.RecentBuyItemBinding
 
-class RecentBuyAdapter(private var context : Context, private var foodnameslist:ArrayList<String>, private var foodimagelist:ArrayList<String>, private var foodpricelist : ArrayList<String>,private var foodquanitylist : ArrayList<Int>): RecyclerView.Adapter<RecentBuyAdapter.RecentBuyViewHolder>() {
+class RecentBuyAdapter(private var context: Context, private var foodnameslist: MutableList<String>, private var foodimagelist: MutableList<String>, private var foodpricelist: MutableList<String>, private var foodquanitylist: MutableList<Int>): RecyclerView.Adapter<RecentBuyAdapter.RecentBuyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecentBuyViewHolder {
