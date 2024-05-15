@@ -156,6 +156,7 @@ id recentbuyitem
 id recentfoodprice
 id recentorderrecview
 id recentorderstatus
+id recyclerViewBuyItem
 id saveinformation
 id searchFragment
 id searchView
@@ -171,6 +172,7 @@ id textView17
 id textView18
 id textView19
 id textView2
+id textView20
 id textView22
 id textView24
 id textView25
@@ -193,6 +195,7 @@ layout activity_login
 layout activity_main
 layout activity_pay_out
 layout activity_recent_order_history
+layout activity_recent_order_items
 layout activity_sign
 layout activity_splash_screen
 layout activity_start

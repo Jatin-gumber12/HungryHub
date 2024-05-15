@@ -2,7 +2,6 @@ package com.example.hungryhub.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.google.firebase.database.ServerValue
 import java.io.Serializable
 
 class OrderDetails() : Serializable {
@@ -31,9 +30,9 @@ class OrderDetails() : Serializable {
         address: String?,
         totalprice: String?,
         phonenumber: String?,
-        currentTime : Long,
-        itempushkey : String?,
-        orderAccepted: Boolean ,
+        currentTime: Long,
+        itempushkey: String?,
+        orderAccepted: Boolean,
         paymentReceived: Boolean
     ) : this() {
         this.userUid = useruid

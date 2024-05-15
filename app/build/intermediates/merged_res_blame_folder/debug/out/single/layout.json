@@ -4,10 +4,6 @@
         "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_home.xml",
-        "source": "com.example.hungryhub.app-main-7:/layout/fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_pay_out.xml",
         "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_pay_out.xml"
     },
@@ -60,6 +56,10 @@
         "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_home.xml"
     },
     {
+        "merged": "com.example.hungryhub.app-mergeDebugResources-4:/layout/fragment_history.xml",
+        "source": "com.example.hungryhub.app-main-7:/layout/fragment_history.xml"
+    },
+    {
         "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\fragment_history.xml",
         "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\fragment_history.xml"
     },
@@ -78,6 +78,10 @@
     {
         "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_sign.xml",
         "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_sign.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_recent_order_items.xml",
+        "source": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-main-7:\\layout\\activity_recent_order_items.xml"
     },
     {
         "merged": "C:\\Users\\Ayush RAi\\AndroidStudioProjects\\daemon\\8.4\\com.example.hungryhub.app-mergeDebugResources-4:\\layout\\activity_recent_order_history.xml",
