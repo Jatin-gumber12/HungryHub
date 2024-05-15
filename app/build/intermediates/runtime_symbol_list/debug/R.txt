@@ -3814,6 +3814,7 @@ int id recentfoodprice 0x7f0801ec
 int id recentorderrecview 0x7f0801ed
 int id recentorderstatus 0x7f0801ee
 int id rectangles 0x7f0801ef
+int id recyclerViewBuyItem 0x7f0802ad
 int id report_drawn 0x7f0801f0
 int id reverseSawtooth 0x7f0801f1
 int id right 0x7f0801f2
@@ -3932,6 +3933,7 @@ int id textView17 0x7f080262
 int id textView18 0x7f080263
 int id textView19 0x7f080264
 int id textView2 0x7f080265
+int id textView20 0x7f0802ac
 int id textView22 0x7f080266
 int id textView24 0x7f080267
 int id textView25 0x7f080268
@@ -4123,6 +4125,7 @@ int layout activity_login 0x7f0b001e
 int layout activity_main 0x7f0b001f
 int layout activity_pay_out 0x7f0b0020
 int layout activity_recent_order_history 0x7f0b0021
+int layout activity_recent_order_items 0x7f0b008c
 int layout activity_sign 0x7f0b0022
 int layout activity_splash_screen 0x7f0b0023
 int layout activity_start 0x7f0b0024

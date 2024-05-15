@@ -85,22 +85,20 @@
                     android:layout_marginEnd="32dp"
                     app:cardBackgroundColor="#C6C6C6"
                     app:cardCornerRadius="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.5">
                 </androidx.cardview.widget.CardView>
 
-                <androidx.appcompat.widget.AppCompatButton
+                <Button
                     android:id="@+id/receivedButton"
-                    android:layout_width="60dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:backgroundTint="@color/text_color"
                     android:text="Received"
                     android:textAllCaps="false"
-                    android:visibility="invisible"
+                    android:visibility="visible"
                     android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/recentorderstatus"
                     app:layout_constraintStart_toStartOf="@+id/recentorderstatus"
                     app:layout_constraintTop_toBottomOf="@+id/recentorderstatus" />

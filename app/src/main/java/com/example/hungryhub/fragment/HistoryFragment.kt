@@ -15,13 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.hungryhub.CongratsBottomSheet
 import com.example.hungryhub.RecentOrderHistory
-import com.example.hungryhub.RecentOrderItems
 import com.example.hungryhub.model.OrderDetails
 //import com.example.hungryhub.RecentOrderHistory
 import com.example.hungryhub.SharedPreference.ProfileSavedPreferences
 import com.example.hungryhub.adaptar.BuyAgainAdapter
 import com.example.hungryhub.databinding.FragmentHistoryBinding
-import com.example.hungryhub.databinding.RecentBuyItemBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -65,6 +63,7 @@ class HistoryFragment : Fragment() {
         var itempushkey = listoforderitem[0].itemPushKey
         var completeorderref = database.reference.child("CompletedOrderDetails").child(itempushkey!!)
         completeorderref.child("paymentReceived").setValue(true)
+        binding.recentorderstatus.background.setTint(Color.GREEN)
     }
 
 
@@ -211,7 +210,7 @@ class HistoryFragment : Fragment() {
                val isOrderAccepted = true
          Log.d("Order Accepted","setDataInRecentBuyItem : $isOrderAccepted $listoforderitem[0]")
            if(isOrderAccepted){
-               recentorderstatus.background.setTint(Color.GREEN)
+
                receivedButton.visibility = View.VISIBLE
 
            }}
